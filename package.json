@@ -1,0 +1,11 @@
+{
+  "name": "jsondb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "db": "json-server --watch db.json --port 5222"
+  },
+  "author": "",
+  "license": "ISC"
+}
