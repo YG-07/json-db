@@ -25,6 +25,5 @@ jobs:
       with:
         node-version: '16'
     - run: npm install
-    - run: ls
-    - run: npm run db
+    - run: nohup npm run db &
   
