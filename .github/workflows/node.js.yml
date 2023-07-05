@@ -19,19 +19,12 @@ jobs:
         image: nginx
         ports:
           - 8000:80
-
-    strategy:
-      matrix:
-        node-version: [16.19.0]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
     steps:
     - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
+    - uses: actions/setup-node@v3
       with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
+        node-version: '16'
     - run: npm install
+    - run: ls
     - run: npm run db
   
